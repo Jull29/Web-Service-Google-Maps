@@ -152,8 +152,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             locationManager.removeUpdates(locationListener);
         }
-
-
     }
     @Override
     protected void onResume() {
@@ -169,24 +167,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
         }
-
-
-
     }
 
     public void MostrarLocalizacion(Location loc){
-
-
 
         if (loc!=null){
             hiloconexion = new ObtenerWebService();
             hiloconexion.execute(String.valueOf(loc.getLatitude()),String.valueOf(loc.getLongitude()));
         }
 
-
-
 }
-
     }
 
     @Override
